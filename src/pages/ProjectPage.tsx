@@ -38,8 +38,8 @@ export default function ProjectPage() {
       }}>
         Project not found.{' '}
         <button
-          // onClick={() => navigate('/portfolio-new')}
-          onClick={() => { window.location.href = `/portfolio-new/`; }}
+          onClick={() => navigate('/portfolio-new/')}
+          // onClick={() => { window.location.href = `/portfolio-new/`; }}
           style={{ marginLeft: 8, color: 'var(--accent)', background: 'none', border: 'none', cursor: 'pointer', fontFamily: 'inherit' }}
         >
           Go home →
@@ -65,8 +65,8 @@ export default function ProjectPage() {
         backdropFilter: 'blur(12px)',
       }}>
         <button
-          // onClick={() => navigate('/portfolio-new')}
-          onClick={() => { window.location.href = `/portfolio-new/`; }}
+          onClick={() => navigate('/portfolio-new/')}
+          // onClick={() => { window.location.href = `/portfolio-new/`; }}
           style={{
             display: 'flex', alignItems: 'center', gap: '10px',
             fontFamily: 'var(--font-mono)', fontSize: '12px',
