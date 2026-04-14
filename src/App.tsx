@@ -49,8 +49,8 @@ export default function App() {
         <ScrollToTop />
         <Cursor />
         <Routes>
-          <Route path="/portfolio-new"              element={<HomePage />}    />
-          <Route path="/project/:slug" element={<ProjectPage />} />
+          <Route path="/portfolio-new/"              element={<HomePage />}    />
+          <Route path="/portfolio-new/project/:slug" element={<ProjectPage />} />
         </Routes>
       </BrowserRouter>
     </ThemeProvider>

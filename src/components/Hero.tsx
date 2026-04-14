@@ -93,7 +93,7 @@ function CirclePhoto() {
         }}
       >
         <img
-          src="/profile.png"
+          src="public/profile.png"
           alt="Dinuka Ekanayake"
           style={{
             width: '100%',

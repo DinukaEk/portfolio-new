@@ -7,5 +7,5 @@ export default defineConfig(({ command }) => ({
     react(),
     tailwindcss(),
   ],
-  base: command === 'build' ? '/portfolio-new/' : '/',
+  base: '/portfolio-new/',
 }))

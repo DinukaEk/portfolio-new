@@ -38,7 +38,8 @@ export default function ProjectPage() {
       }}>
         Project not found.{' '}
         <button
-          onClick={() => navigate('/')}
+          // onClick={() => navigate('/portfolio-new')}
+          onClick={() => { window.location.href = `/portfolio-new/`; }}
           style={{ marginLeft: 8, color: 'var(--accent)', background: 'none', border: 'none', cursor: 'pointer', fontFamily: 'inherit' }}
         >
           Go home →
@@ -64,7 +65,8 @@ export default function ProjectPage() {
         backdropFilter: 'blur(12px)',
       }}>
         <button
-          onClick={() => navigate('/')}
+          // onClick={() => navigate('/portfolio-new')}
+          onClick={() => { window.location.href = `/portfolio-new/`; }}
           style={{
             display: 'flex', alignItems: 'center', gap: '10px',
             fontFamily: 'var(--font-mono)', fontSize: '12px',
@@ -262,7 +264,7 @@ export default function ProjectPage() {
       }}>
         {prevProject && (
           <button
-            onClick={() => navigate(`/project/${prevProject.slug}`)}
+            onClick={() => navigate(`/portfolio-new/project/${prevProject.slug}`)}
             style={{
               padding: 'clamp(28px, 4vw, 48px) clamp(24px, 5vw, 60px)',
               borderRight: nextProject ? '1px solid var(--border)' : 'none',
@@ -282,7 +284,7 @@ export default function ProjectPage() {
         )}
         {nextProject && (
           <button
-            onClick={() => navigate(`/project/${nextProject.slug}`)}
+            onClick={() => navigate(`/portfolio-new/project/${nextProject.slug}`)}
             style={{
               padding: 'clamp(28px, 4vw, 48px) clamp(24px, 5vw, 60px)',
               background: 'none', border: 'none', cursor: 'pointer',
