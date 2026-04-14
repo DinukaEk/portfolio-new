@@ -83,7 +83,7 @@ function ProjectCard({
       <div style={{ display: 'flex', gap: '10px', flexWrap: 'wrap' }}>
         {/* Case study button */}
         <button
-          onClick={() => { window.location.href = `${import.meta.env.BASE_URL}project/${project.slug}`; }}
+          onClick={() => { window.location.href = `/project/${project.slug}`; }}
           style={{
             fontFamily: 'var(--font-mono)', fontSize: '11px', letterSpacing: '1px',
             padding: '9px 20px', border: '1px solid var(--fg)',

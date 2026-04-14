@@ -1,4 +1,4 @@
-import { useParams } from 'react-router-dom';
+import { useParams, useNavigate } from 'react-router-dom';
 import { useRef } from 'react';
 import { motion, useInView } from 'framer-motion';
 import { projects } from '../data/portfolio';
@@ -26,6 +26,7 @@ function FadeUp({ children, delay = 0, style }: {
 
 export default function ProjectPage() {
   const { slug } = useParams<{ slug: string }>();
+  const navigate = useNavigate();
   const project  = projects.find(p => p.slug === slug);
 
   if (!project) {
@@ -37,7 +38,7 @@ export default function ProjectPage() {
       }}>
         Project not found.{' '}
         <button
-          onClick={() => window.location.href = import.meta.env.BASE_URL}
+          onClick={() => navigate('/')}
           style={{ marginLeft: 8, color: 'var(--accent)', background: 'none', border: 'none', cursor: 'pointer', fontFamily: 'inherit' }}
         >
           Go home →
@@ -63,7 +64,7 @@ export default function ProjectPage() {
         backdropFilter: 'blur(12px)',
       }}>
         <button
-          onClick={() => window.location.href = import.meta.env.BASE_URL}
+          onClick={() => navigate('/')}
           style={{
             display: 'flex', alignItems: 'center', gap: '10px',
             fontFamily: 'var(--font-mono)', fontSize: '12px',
@@ -261,7 +262,7 @@ export default function ProjectPage() {
       }}>
         {prevProject && (
           <button
-            onClick={() => window.location.href = `${import.meta.env.BASE_URL}project/${prevProject.slug}`}
+            onClick={() => navigate(`/project/${prevProject.slug}`)}
             style={{
               padding: 'clamp(28px, 4vw, 48px) clamp(24px, 5vw, 60px)',
               borderRight: nextProject ? '1px solid var(--border)' : 'none',
@@ -281,7 +282,7 @@ export default function ProjectPage() {
         )}
         {nextProject && (
           <button
-            onClick={() => window.location.href = `${import.meta.env.BASE_URL}project/${nextProject.slug}`}
+            onClick={() => navigate(`/project/${nextProject.slug}`)}
             style={{
               padding: 'clamp(28px, 4vw, 48px) clamp(24px, 5vw, 60px)',
               background: 'none', border: 'none', cursor: 'pointer',

@@ -44,17 +44,12 @@ function HomePage() {
 export default function App() {
   return (
     <ThemeProvider>
-      {/*
-        basename tells React Router where the app is mounted.
-        import.meta.env.BASE_URL = '/portfolio-new/' in production (GitHub Pages)
-                                 = '/'               in local dev
-        This makes all <Route> paths resolve correctly in both environments.
-      */}
-      <BrowserRouter basename={import.meta.env.BASE_URL}>
+      <BrowserRouter>
+        {/* Resets scroll position on every route change */}
         <ScrollToTop />
         <Cursor />
         <Routes>
-          <Route path="/"              element={<HomePage />}    />
+          <Route path="/portfolio-new"              element={<HomePage />}    />
           <Route path="/project/:slug" element={<ProjectPage />} />
         </Routes>
       </BrowserRouter>
