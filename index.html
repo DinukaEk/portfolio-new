@@ -19,13 +19,40 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 
-    <!-- GitHub Pages SPA redirect restore -->
+    <!-- Inline theme script — runs BEFORE any render to prevent flash -->
     <script>
-      (function() {
+      (function () {
+        // 1. Apply saved theme immediately so CSS vars exist before React mounts
+        var saved = localStorage.getItem('theme');
+        var prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+        var theme = (saved === 'light' || saved === 'dark') ? saved : (prefersDark ? 'dark' : 'light');
+        var r = document.documentElement;
+        if (theme === 'dark') {
+          r.style.setProperty('--bg',        '#111010');
+          r.style.setProperty('--fg',        '#ede9e3');
+          r.style.setProperty('--accent',    '#e06040');
+          r.style.setProperty('--accent2',   '#6da4d4');
+          r.style.setProperty('--muted',     '#8a857e');
+          r.style.setProperty('--card-bg',   '#1c1b1a');
+          r.style.setProperty('--border',    'rgba(237,233,227,0.1)');
+          r.style.setProperty('--border-sm', 'rgba(237,233,227,0.05)');
+        } else {
+          r.style.setProperty('--bg',        '#f5f2ee');
+          r.style.setProperty('--fg',        '#0e0e0e');
+          r.style.setProperty('--accent',    '#c84b2f');
+          r.style.setProperty('--accent2',   '#1a3a5c');
+          r.style.setProperty('--muted',     '#7a7570');
+          r.style.setProperty('--card-bg',   '#ffffff');
+          r.style.setProperty('--border',    'rgba(14,14,14,0.1)');
+          r.style.setProperty('--border-sm', 'rgba(14,14,14,0.06)');
+        }
+
+        // 2. GitHub Pages SPA redirect restore
         var redirect = sessionStorage.getItem('ghpages_redirect');
         if (redirect && redirect !== '/') {
           sessionStorage.removeItem('ghpages_redirect');
-          window.history.replaceState(null, '', '/portfolio-new' + redirect);
+          var base = window.location.pathname.includes('/portfolio-new') ? '/portfolio-new' : '';
+          window.history.replaceState(null, '', base + redirect);
         }
       })();
     </script>
