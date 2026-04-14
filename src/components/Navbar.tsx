@@ -137,7 +137,7 @@ export default function Navbar() {
 
           {/* Resume button */}
           <a
-            href="/CV__Dinuka_Ekanayake.pdf"
+            href="/portfolio-new/CV__Dinuka_Ekanayake.pdf"
             target="_blank" rel="noreferrer"
             style={{
               fontFamily: 'var(--font-mono)', fontSize: '11px', letterSpacing: '1px',
