@@ -1,4 +1,3 @@
-import { useNavigate } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import SectionLabel from './SectionLabel';
 import { projects } from '../data/portfolio';
@@ -12,7 +11,6 @@ function ProjectCard({
   index: number;
 }) {
   const { ref, inView } = useScrollReveal({ margin: '-60px' });
-  const navigate = useNavigate();
 
   return (
     <motion.div

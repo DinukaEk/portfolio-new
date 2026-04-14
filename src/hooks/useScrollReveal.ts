@@ -1,9 +1,17 @@
 import { useRef } from 'react';
 import { useInView, Variants } from 'framer-motion';
 
+// Framer Motion's useInView accepts margin as a template literal type
+// matching CSS shorthand — we cast to satisfy strict TS without widening
+type MarginValue = `${number}px` | `${number}%`;
+type MarginType  = MarginValue
+  | `${MarginValue} ${MarginValue}`
+  | `${MarginValue} ${MarginValue} ${MarginValue}`
+  | `${MarginValue} ${MarginValue} ${MarginValue} ${MarginValue}`;
+
 interface UseScrollRevealOptions {
-  once?: boolean;
-  margin?: string;
+  once?:  boolean;
+  margin?: MarginType;
   delay?: number;
 }
 
@@ -30,7 +38,7 @@ export const staggerContainerVariants: Variants = {
 };
 
 export default function useScrollReveal(options: UseScrollRevealOptions = {}) {
-  const { once = true, margin = '-80px' } = options;
+  const { once = true, margin = '-80px' as MarginType } = options;
   const ref    = useRef(null);
   const inView = useInView(ref, { once, margin });
   return { ref, inView };
