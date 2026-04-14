@@ -4,13 +4,22 @@
     <meta charset="utf-8" />
     <title>Dinuka Ekanayake</title>
     <script>
-      // GitHub Pages 404 redirect trick
-      // Stores the path in sessionStorage then redirects to index.html
-      var path = window.location.pathname;
-      var base = '/portfolio-new';
-      var redirectPath = path.replace(base, '') || '/';
-      sessionStorage.setItem('ghpages_redirect', redirectPath);
-      window.location.replace(base + '/');
+      // GitHub Pages SPA redirect:
+      // When a deep URL like /portfolio-new/project/foo is hit directly,
+      // GitHub serves this 404.html. We store the sub-path and redirect
+      // to the app root, which restores it via sessionStorage.
+      (function () {
+        var location = window.location;
+        // Everything after the repo name is the sub-path we want to restore
+        var segmentCount = 1; // number of path segments for the repo (portfolio-new = 1)
+        var path = location.pathname
+          .split('/')
+          .slice(0, 1 + segmentCount)
+          .join('/');
+        var subPath = location.pathname.slice(path.length) || '/';
+        sessionStorage.setItem('ghpages_redirect', subPath + location.search + location.hash);
+        location.replace(path + '/');
+      })();
     </script>
   </head>
   <body></body>
