@@ -1,0 +1,55 @@
+/* ── Fonts ────────────────────────────────────────────────────────────────────
+   Display: Oxanium — angular, technical, futuristic coding vibe
+   Mono:    JetBrains Mono — the quintessential developer monospace           */
+@import url('https://fonts.googleapis.com/css2?family=Oxanium:wght@400;500;600;700;800&family=JetBrains+Mono:ital,wght@0,400;0,500;0,700;1,400&display=swap');
+@import "tailwindcss";
+
+/* ── Design tokens (defaults = light; overridden by ThemeContext.tsx) ─────── */
+:root {
+  --font-display: 'Oxanium', sans-serif;
+  --font-mono:    'JetBrains Mono', monospace;
+
+  --bg:        #f5f2ee;
+  --fg:        #0e0e0e;
+  --accent:    #c84b2f;
+  --accent2:   #1a3a5c;
+  --muted:     #7a7570;
+  --card-bg:   #ffffff;
+  --border:    rgba(14, 14, 14, 0.1);
+  --border-sm: rgba(14, 14, 14, 0.06);
+}
+
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+html { scroll-behavior: smooth; -webkit-font-smoothing: antialiased; }
+
+body {
+  font-family: var(--font-display);
+  background-color: var(--bg);
+  color: var(--fg);
+  overflow-x: hidden;
+  cursor: none;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* ── Custom cursor ────────────────────────────────────────────────────────── */
+.cursor { position: fixed; pointer-events: none; z-index: 9999; mix-blend-mode: difference; }
+.cursor-dot  { width: 8px; height: 8px; background: var(--fg); border-radius: 50%; transform: translate(-50%, -50%); transition: transform 0.1s ease; }
+.cursor-ring { width: 36px; height: 36px; border: 1px solid var(--fg); border-radius: 50%; transform: translate(-50%, -50%); transition: transform 0.12s ease, width 0.3s ease, height 0.3s ease, opacity 0.3s ease; }
+.cursor-ring.hovering { width: 64px; height: 64px; opacity: 0.5; }
+
+/* ── Scrollbar ────────────────────────────────────────────────────────────── */
+::-webkit-scrollbar       { width: 4px; }
+::-webkit-scrollbar-track { background: var(--bg); }
+::-webkit-scrollbar-thumb { background: var(--muted); }
+
+/* ── Selection ────────────────────────────────────────────────────────────── */
+::selection { background: var(--accent); color: #fff; }
+
+/* ── Utilities ────────────────────────────────────────────────────────────── */
+.font-display  { font-family: var(--font-display); }
+.font-mono     { font-family: var(--font-mono); }
+.text-accent   { color: var(--accent); }
+.text-muted    { color: var(--muted); }
+.bg-card       { background-color: var(--card-bg); }
+.border-custom { border-color: var(--border); }
