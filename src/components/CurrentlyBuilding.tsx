@@ -161,7 +161,6 @@ export default function CurrentlyBuilding() {
           letterSpacing: '0.3px',
         }}
       >
-        ↳ Updated in <code style={{ fontSize: '10px' }}>src/data/portfolio.ts</code> → currentlyBuilding
       </motion.p>
     </section>
   );
