@@ -339,16 +339,13 @@ export default function About() {
 
           <motion.p
             variants={fadeUp(0.1)} initial="hidden" animate={inView ? 'visible' : 'hidden'}
-            style={{ fontFamily: 'var(--font-mono)', fontSize: '13px', lineHeight: 1.9, color: 'var(--muted)', maxWidth: '480px' }}
+            style={{ fontFamily: 'var(--font-mono)', fontSize: '13px', lineHeight: 1.9, color: 'var(--muted)', maxWidth: '600px' }}
           >
-            Full-stack software engineer with hands-on experience building scalable
-            web applications, AR-based interfaces, and applied AI systems. Delivered
-            production-grade features in ERP systems and built an AI-powered virtual
-            try-on platform integrating AR, segmentation, and diffusion models.
+            I’m a Full-Stack Software Engineer with industry experience in building and maintaining production-grade ERP systems. I focus on developing scalable, user-centric applications and solving real-world problems through clean and efficient code.
             <br /><br />
-            Passionate about crafting user-focused digital experiences, solving complex
-            engineering problems, and continuously expanding expertise across full-stack
-            development and machine learning.
+            I’ve also worked on advanced personal projects, including AI-powered applications and interactive 3D web experiences, reflecting my interest in modern and immersive technologies.
+            <br /><br />
+            Currently, I’m expanding into DevOps and cloud engineering, learning to design and manage systems that are not only functional but also reliable, scalable, and production-ready.
           </motion.p>
 
           <motion.div

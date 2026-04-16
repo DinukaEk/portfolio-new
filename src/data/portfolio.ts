@@ -3,7 +3,10 @@ export const personalInfo = {
   firstName: 'Dinuka',
   lastName: 'Ekanayake',
   role: 'Software Engineer',
-  tagline: 'Full-stack engineer building scalable web apps,\nAR interfaces & applied AI systems.',
+  tagline: {
+    bold: 'Full-Stack Software Engineer building scalable, real-world systems and immersive web experiences.',
+    rest: 'Experienced in developing production-grade ERP applications and modern web platforms, with a growing focus on DevOps practices, cloud infrastructure, and system reliability.'
+  },
   location: 'Sri Lanka',
   email: 'dinukaekanayake2218@gmail.com',
   phone: '+94717026986',
@@ -273,5 +276,72 @@ export const currentlyBuilding = [
     title: 'AR Wayfinding App',
     detail: 'Indoor navigation prototype using WebXR + custom marker tracking',
     date: 'Mar 2026',
+  },
+];
+
+// ─── Certifications ───────────────────────────────────────────────────────────
+export type Certification = {
+  title: string;
+  issuer: string;
+  issued: string;
+  credentialId?: string;
+  credentialUrl: string;
+  skills: string[];
+  // Issuer short code for the logo badge colour
+  issuerKey: 'aws' | 'kodekloud' | 'other';
+};
+
+export const certifications: Certification[] = [
+  {
+    title: 'AWS Academy Graduate - AWS Academy Cloud Foundations',
+    issuer: 'Amazon Web Services (AWS)',
+    issued: 'Jun 2023',
+    credentialUrl: 'https://www.credly.com/badges/7a4afa9a-799e-47c4-b952-89670644d588/linked_in_profile',
+    skills: ['Amazon Web Services (AWS)'],
+    issuerKey: 'aws',
+  },
+  {
+    title: 'AWS Academy Graduate - AWS Academy Cloud Architecting',
+    issuer: 'Amazon Web Services (AWS)',
+    issued: 'Jun 2023',
+    credentialUrl: 'https://www.credly.com/badges/469b1347-1ad5-4954-8af4-32ce939f39fe/linked_in_profile',
+    skills: ['Amazon Web Services (AWS)'],
+    issuerKey: 'aws',
+  },
+  {
+    title: 'KodeKloud Engineer - Docker (Level 1)',
+    issuer: 'KodeKloud',
+    issued: 'Feb 2026',
+    credentialId: '3b1fb1ee-fea2-4e3e-b3e2-a1a8b68c7414',
+    credentialUrl: 'https://engineer.kodekloud.com/certificate-verification/3b1fb1ee-fea2-4e3e-b3e2-a1a8b68c7414',
+    skills: ['Docker'],
+    issuerKey: 'kodekloud',
+  },
+  {
+    title: 'KodeKloud Engineer - Linux (Level 1)',
+    issuer: 'KodeKloud',
+    issued: 'Mar 2026',
+    credentialId: '8cdbfd9b-ffa3-4884-872e-1f755af6253e',
+    credentialUrl: 'https://engineer.kodekloud.com/certificate-verification/8cdbfd9b-ffa3-4884-872e-1f755af6253e',
+    skills: ['Linux'],
+    issuerKey: 'kodekloud',
+  },
+  {
+    title: 'KodeKloud Engineer - Jenkins (Level 1)',
+    issuer: 'KodeKloud',
+    issued: 'Apr 2026',
+    credentialId: '284f322f-d13d-4a4e-86af-f78699dfc6c6',
+    credentialUrl: 'https://engineer.kodekloud.com/certificate-verification/284f322f-d13d-4a4e-86af-f78699dfc6c6',
+    skills: ['Jenkins'],
+    issuerKey: 'kodekloud',
+  },
+  {
+    title: 'KodeKloud Engineer - Kubernetes (Level 1)',
+    issuer: 'KodeKloud',
+    issued: 'Apr 2026',
+    credentialId: 'c6b07cef-9f79-4025-9ca1-91acb1077fce',
+    credentialUrl: 'https://engineer.kodekloud.com/certificate-verification/c6b07cef-9f79-4025-9ca1-91acb1077fce',
+    skills: ['Kubernetes'],
+    issuerKey: 'kodekloud',
   },
 ];

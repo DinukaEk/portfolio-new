@@ -8,6 +8,7 @@ import Marquee             from './components/Marquee';
 import About               from './components/About';
 import Projects            from './components/Projects';
 import Experience          from './components/Experience';
+import Certifications      from './components/Certifications';
 import CurrentlyBuilding   from './components/CurrentlyBuilding';
 import Contact             from './components/Contact';
 import Footer              from './components/Footer';
@@ -33,6 +34,7 @@ function HomePage() {
         <Marquee items={softItems} speed={50} inverted />
         <Projects />
         <Experience />
+        <Certifications />
         <CurrentlyBuilding />
         <Contact />
       </main>

@@ -191,9 +191,20 @@ export default function Hero() {
         >
           <p style={{
             fontFamily: 'var(--font-mono)', fontSize: '13px',
-            lineHeight: 1.8, color: 'var(--muted)', maxWidth: '400px',
+            lineHeight: 1.8, color: 'var(--muted)', maxWidth: '600px',
           }}>
-            {personalInfo.tagline}
+            <span style={{
+              fontWeight: 999, // stronger than default bold (700)
+              color: 'var(--foreground)', // optional: makes it pop more
+            }}>
+              {personalInfo.tagline.bold}
+            </span>
+            <br />
+            <span style={{
+              fontSize: '9px',
+            }}>
+              {personalInfo.tagline.rest}
+            </span>
           </p>
           <div style={{
             display: 'inline-flex', alignItems: 'center', gap: '8px',

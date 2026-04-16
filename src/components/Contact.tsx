@@ -2,17 +2,7 @@ import { useRef, useState, FormEvent } from 'react';
 import { motion, useInView, AnimatePresence } from 'framer-motion';
 import { personalInfo } from '../data/portfolio';
 
-// ─────────────────────────────────────────────────────────────────────────────
-// SETUP INSTRUCTIONS (one-time, 5 minutes):
-//
-//  1. Go to https://emailjs.com and create a free account
-//  2. Add an Email Service (Gmail recommended) → copy the SERVICE_ID
-//  3. Create an Email Template with these variables:
-//       {{from_name}}   {{from_email}}   {{subject}}   {{message}}
-//     → copy the TEMPLATE_ID
-//  4. Go to Account → API Keys → copy your PUBLIC_KEY
-//  5. Replace the three placeholder strings below with your real values
-// ─────────────────────────────────────────────────────────────────────────────
+
 const EMAILJS_SERVICE_ID  = 'service_egxxkoj';
 const EMAILJS_TEMPLATE_ID = 'template_ha5z44v';
 const EMAILJS_PUBLIC_KEY  = 'DUGQ6OYXQe77lkPsH';
@@ -189,7 +179,7 @@ export default function Contact() {
       >
         {/* Section label */}
         <div style={{ fontFamily: 'var(--font-mono)', fontSize: '11px', letterSpacing: '2px', textTransform: 'uppercase', color: 'var(--accent)', marginBottom: '20px' }}>
-          004 — Contact
+          005 — Contact
         </div>
 
         {/* Heading */}
