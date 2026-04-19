@@ -7,17 +7,24 @@ interface MarqueeProps {
 }
 
 const defaultItems = [
-  'React',
+  'Python',
   'TypeScript',
+  'JavaScript',
+  'React',
   'Three.js',
+  'Tailwind CSS',
+  'PHP',
   'FastAPI',
   'TensorFlow',
   'Next.js',
+  'Laravel',
   'MediaPipe',
   'Node.js',
-  'WebGL',
+  'DevOps',
   'Docker',
   'AWS',
+  'Azure',
+  'MySQL',
   'MongoDB',
 ];
 

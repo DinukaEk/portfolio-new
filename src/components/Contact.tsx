@@ -193,7 +193,7 @@ export default function Contact() {
           Let's build something{' '}
           <span style={{ color: 'var(--accent)' }}>remarkable.</span>
         </h2>
-        <p style={{ fontFamily: 'var(--font-mono)', fontSize: '13px', lineHeight: 1.7, opacity: 0.6, marginBottom: '56px', maxWidth: '420px' }}>
+        <p style={{ fontFamily: 'var(--font-mono)', fontSize: '13px', lineHeight: 1.7, opacity: 0.6, marginBottom: '56px', maxWidth: '620px' }}>
           Open to full-time roles, freelance projects, and interesting collaborations. Fill in the form or reach out directly.
         </p>
 

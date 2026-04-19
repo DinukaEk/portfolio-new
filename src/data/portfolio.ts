@@ -20,7 +20,7 @@ export const skills = [
   { category: 'Frontend',       items: ['React', 'Next.js', 'Three.js', 'HTML5', 'CSS', 'Tailwind CSS'] },
   { category: 'Backend & APIs', items: ['Node.js', 'Laravel', 'Flask', 'FastAPI', 'REST API'] },
   { category: 'AI / ML',        items: ['TensorFlow/Keras', 'U\u00b2-Net', 'MediaPipe Pose', 'OpenCV', 'Hugging Face'] },
-  { category: 'Databases',      items: ['MySQL', 'MongoDB', 'Firebase'] },
+  { category: 'Databases',      items: ['MySQL', 'MongoDB', 'Firebase', 'PostgreSQL'] },
   { category: 'Cloud & DevOps', items: ['AWS', 'Azure', 'Docker', 'Git', 'Vercel', 'CI/CD'] },
 ];
 
@@ -221,7 +221,7 @@ export const experience = [
     company: 'Csquare Technologies Pvt. Ltd.',
     role: 'Software Engineer',
     type: 'work',
-    description: 'Developed, maintained, and tested web-based ERP systems. Designed robust features and modules, translated complex business requirements into scalable system architectures, oversaw deployment, and provided high-level technical support.',
+    description: 'Developed, maintained, and tested web-based ERP systems. Designed robust features and modules, translated complex business requirements into scalable system architectures, oversaw deployment, managed deployments with minimal disruption, and provided high-level technical support to resolve critical issues and ensure customer satisfaction.',
     stack: ['PHP', 'HTML', 'CSS', 'JavaScript'],
   },
   {
@@ -229,26 +229,26 @@ export const experience = [
     company: 'Sri Lanka Technology Campus',
     role: 'BSc (Hons) in Engineering in Information & Communication Engineering',
     type: 'education',
-    description: 'Specialised in Software Dev & Design, OOP, Data Structures & Algorithms, DBMS, Cloud Computing, Data Science, and ML/DL/NN. Vice Chairman IEEE Computer Society Student Branch Chapter.',
+    description: 'Comprehensive engineering degree focused on software engineering, computer systems, and communication technologies. Gained strong foundations in programming, data structures and algorithms, database systems, operating systems, computer networks, and cloud computing, along with exposure to machine learning, data engineering, and secure systems. Completed industry training and research projects, developing practical experience in building scalable and real-world applications.',
     stack: [],
   },
 ];
 
 export const stats = [
   { num: '2+',  label: 'Years industry exp.' },
-  { num: '4+',  label: 'Projects shipped'    },
+  { num: '20+',  label: 'Projects completed'    },
   { num: '15+', label: 'Technologies'        },
   { num: '120+',label: 'Events covered'      },
 ];
 
 // ─── Skill proficiency levels (0–100) ────────────────────────────────────────
 export const skillLevels = [
-  { category: 'Frontend Dev',     level: 90, items: ['React', 'Next.js', 'Three.js', 'Tailwind CSS'] },
-  { category: 'Backend & APIs',   level: 82, items: ['Node.js', 'FastAPI', 'Flask', 'Laravel'] },
-  { category: 'AI / ML',          level: 78, items: ['TensorFlow', 'MediaPipe', 'U²-Net', 'OpenCV'] },
-  { category: 'Programming Lang', level: 88, items: ['TypeScript', 'Python', 'JavaScript', 'PHP'] },
-  { category: 'Cloud & DevOps',   level: 70, items: ['AWS', 'Azure', 'Docker', 'CI/CD'] },
-  { category: 'Databases',        level: 75, items: ['MySQL', 'MongoDB', 'Firebase'] },
+  { category: 'Frontend Dev',     level: 95, items: ['React', 'Next.js', 'Three.js', 'HTML5', 'CSS', 'Tailwind CSS'] },
+  { category: 'Backend & APIs',   level: 88, items: ['Node.js', 'Laravel', 'Flask', 'FastAPI', 'REST API'] },
+  { category: 'AI / ML',          level: 80, items: ['TensorFlow', 'MediaPipe', 'U²-Net', 'OpenCV', 'Hugging Face'] },
+  { category: 'Programming',      level: 92, items: ['Python', 'TypeScript', 'JavaScript', 'PHP', 'Java', 'C/C++'] },
+  { category: 'Cloud & DevOps',   level: 78, items: ['AWS', 'Azure', 'Docker', 'Git', 'Vercel', 'CI/CD'] },
+  { category: 'Databases',        level: 85, items: ['MySQL', 'MongoDB', 'Firebase', 'PostgreSQL'] },
 ];
 
 // ─── Currently building / learning ───────────────────────────────────────────
@@ -261,8 +261,8 @@ export const currentlyBuilding = [
   },
   {
     type: 'learning' as const,
-    title: 'LangChain + RAG',
-    detail: 'Exploring retrieval-augmented generation for document Q&A',
+    title: 'Modern DevOps',
+    detail: 'Learning CI/CD pipelines, Docker, Jenkins, Terraform, Kubernetes, and cloud deployment practices',
     date: 'Ongoing',
   },
   {
@@ -273,8 +273,8 @@ export const currentlyBuilding = [
   },
   {
     type: 'building' as const,
-    title: 'AR Wayfinding App',
-    detail: 'Indoor navigation prototype using WebXR + custom marker tracking',
+    title: 'Multi-Tenant CRM System',
+    detail: 'Engineered a SaaS CRM platform enabling multiple organizations with secure tenant isolation and role-based access control',
     date: 'Mar 2026',
   },
 ];

@@ -17,13 +17,13 @@ const LINES: { type: 'cmd' | 'output'; text: string }[] = [
   { type: 'cmd',    text: 'cat role.txt' },
   { type: 'output', text: 'Full-Stack Software Engineer' },
   { type: 'cmd',    text: 'cat location.txt' },
-  { type: 'output', text: 'Sri Lanka' },
+  { type: 'output', text: 'Kandy, Sri Lanka' },
   { type: 'cmd',    text: 'cat status.txt' },
   { type: 'output', text: '> Open to new opportunities' },
   { type: 'cmd',    text: 'ls skills/' },
-  { type: 'output', text: 'react/    three.js/   python/\nfastapi/  tensorflow/ docker/' },
+  { type: 'output', text: 'python/  TypeScript/  JavaScript/  React/  PHP/\nTailwindCSS/  Next.js/  three.js/  Node.js/  Laravel/\nFastAPI/  RestAPI/  MySQL/  MongoDB/  Firebase/\nDevOps/  AWS/  Azure/  Docker/  Git/' },
   { type: 'cmd',    text: 'cat passion.txt' },
-  { type: 'output', text: 'Building things that\npeople actually use.' },
+  { type: 'output', text: 'Building things that people actually use.' },
   { type: 'cmd',    text: './start_collaboration.sh' },
   { type: 'output', text: 'Initialising...\nReady. Lets build something.' },
 ];
@@ -260,7 +260,7 @@ function SkillBar({ name, level, delay, inView }: {
         <motion.div
           initial={{ scaleX: 0 }}
           animate={inView ? { scaleX: 1 } : { scaleX: 0 }}
-          transition={{ duration: 1.1, delay, ease: [0.22, 1, 0.36, 1] }}
+          transition={{ duration: 2.1, delay, ease: [0.22, 1, 0.36, 1] }}
           style={{
             position: 'absolute', inset: 0,
             background: 'linear-gradient(90deg, var(--accent), color-mix(in srgb, var(--accent) 70%, #ff9966))',
@@ -273,7 +273,7 @@ function SkillBar({ name, level, delay, inView }: {
         <motion.div
           initial={{ x: '-100%' }}
           animate={inView ? { x: '400%' } : { x: '-100%' }}
-          transition={{ duration: 1.1, delay: delay + 0.1, ease: 'easeInOut' }}
+          transition={{ duration: 2.1, delay: delay + 0.1, ease: 'easeInOut' }}
           style={{
             position: 'absolute', top: 0, bottom: 0, width: '35%',
             background: 'linear-gradient(90deg, transparent, rgba(255,255,255,0.55), transparent)',

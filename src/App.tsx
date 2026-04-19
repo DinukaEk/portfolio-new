@@ -15,12 +15,13 @@ import Footer              from './components/Footer';
 import ProjectPage         from './pages/ProjectPage';
 
 const techItems = [
-  'React', 'TypeScript', 'Three.js', 'FastAPI', 'TensorFlow',
-  'Next.js', 'MediaPipe', 'Node.js', 'WebGL', 'Docker', 'AWS', 'MongoDB',
+  'Python', 'TypeScript',  'JavaScript',  'React',  'Three.js',  'Tailwind CSS',
+  'PHP',  'FastAPI',  'TensorFlow',  'Next.js',  'Laravel',  'MediaPipe',  'Node.js',
+  'DevOps',  'Docker',  'AWS',  'Azure',  'MySQL',  'MongoDB',
 ];
 const softItems = [
-  'Problem Solving', 'System Design', 'AR Development', 'Machine Learning',
-  'Full-Stack', 'ERP Systems', 'API Design', 'UI Engineering',
+  'Problem Solving', 'Critical Thinking', 'Leadership', 'Flexibility', 'Communication', 'Team Collaboration',
+  'Adaptability', 'System Design', 'AR Development', 'Machine Learning', 'Full-Stack', 'ERP Systems', 'API Design', 'UI Engineering',
 ];
 
 function HomePage() {

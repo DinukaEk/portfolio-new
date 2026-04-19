@@ -167,10 +167,23 @@ export default function Experience() {
               letterSpacing: '-0.5px',
             }}
           >
-            IEEE Computer Society
+            IEEE Computer Society of SLTC
           </h4>
           <p style={{ fontFamily: 'var(--font-mono)', fontSize: '12px', color: 'var(--muted)', marginTop: '8px', lineHeight: 1.7 }}>
             Vice Chairman — Student Branch Chapter of SLTC, 2021–2022
+          </p>
+          <br />
+          <h4
+            style={{
+              fontFamily: 'var(--font-display)',
+              fontSize: '18px', fontWeight: 700,
+              letterSpacing: '-0.5px',
+            }}
+          >
+            Media Unit of SLTC
+          </h4>
+          <p style={{ fontFamily: 'var(--font-mono)', fontSize: '12px', color: 'var(--muted)', marginTop: '8px', lineHeight: 1.7 }}>
+            Treasurer, 2021–2022
           </p>
         </div>
         <div>
@@ -184,10 +197,10 @@ export default function Experience() {
             Recognition
           </div>
           <h4 style={{ fontFamily: 'var(--font-display)', fontSize: '18px', fontWeight: 700, letterSpacing: '-0.5px' }}>
-            IEEE Boost 2021
+            IEEE Boost 2021 — IEEE Sri Lanka Section
           </h4>
           <p style={{ fontFamily: 'var(--font-mono)', fontSize: '12px', color: 'var(--muted)', marginTop: '8px', lineHeight: 1.7 }}>
-            Best Student Branch Chapter — IEEE Sri Lanka Section
+            Best Student Branch Chapter — IEEE Computer Society of SLTC
           </p>
         </div>
         <div>
