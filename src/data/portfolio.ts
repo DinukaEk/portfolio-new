@@ -353,4 +353,13 @@ export const certifications: Certification[] = [
     skills: ['Ansible'],
     issuerKey: 'kodekloud',
   },
+  {
+    title: 'KodeKloud Engineer - Git (Level 1)',
+    issuer: 'KodeKloud',
+    issued: 'Apr 2026',
+    credentialId: 'b4225da3-2409-4a1d-8510-d0fef74b5766',
+    credentialUrl: 'https://engineer.kodekloud.com/certificate-verification/b4225da3-2409-4a1d-8510-d0fef74b5766',
+    skills: ['Git'],
+    issuerKey: 'kodekloud',
+  },
 ];
